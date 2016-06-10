@@ -71,7 +71,3 @@
   (or (funcall (intern (symbol-name '#:run-tests)
                        (find-package '#:montezuma)))
       (error "test-op on ~S failed." c)))
-
-(defmethod operation-done-p ((o test-op) (c (eql (find-system '#:montezuma-tests))))
-  (declare (ignore o) (ignore c))
-  NIL)
