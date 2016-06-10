@@ -134,8 +134,7 @@
 
 (defmethod perform ((o test-op) (c (eql (find-system '#:montezuma))))
   (declare (ignore o) (ignore c))
-  (oos 'load-op '#:montezuma-tests)
-  (oos 'test-op '#:montezuma-tests :force t))
+  (oos 'test-op '#:montezuma-tests))
 
 (defmethod operation-done-p ((o test-op) (c (eql (find-system '#:montezuma))))
   (declare (ignore o) (ignore c))
